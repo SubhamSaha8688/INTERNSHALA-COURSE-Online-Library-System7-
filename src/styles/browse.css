@@ -1,0 +1,115 @@
+.browse-page {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.search-container {
+  position: relative;
+  max-width: 500px;
+  width: 100%;
+}
+
+.search-icon {
+  position: absolute;
+  left: 0.75rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--text-light);
+}
+
+.search-input {
+  width: 100%;
+  padding: 0.75rem 1rem 0.75rem 2.5rem;
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius);
+  font-size: 1rem;
+}
+
+.search-input:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 2px var(--primary-light);
+}
+
+.category-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.category-filter {
+  padding: 0.5rem 1rem;
+  border-radius: 9999px;
+  font-size: 0.875rem;
+  background-color: #f3f4f6;
+  color: var(--text-color);
+  text-decoration: none;
+  transition: background-color 0.2s;
+}
+
+.category-filter:hover {
+  background-color: #e5e7eb;
+  text-decoration: none;
+}
+
+.category-filter.active {
+  background-color: var(--primary-color);
+  color: var(--white);
+}
+
+.no-books {
+  text-align: center;
+  padding: 3rem 0;
+  color: var(--text-light);
+}
+
+.book-category {
+  font-size: 0.75rem;
+  color: var(--text-light);
+  background-color: #f3f4f6;
+  padding: 0.25rem 0.5rem;
+  border-radius: 9999px;
+  display: inline-block;
+  margin-bottom: 0.5rem;
+}
+
+/* Responsive styles */
+@media (max-width: 640px) {
+  .category-filters {
+    overflow-x: auto;
+    white-space: nowrap;
+    padding-bottom: 0.5rem;
+    -webkit-overflow-scrolling: touch;
+    display: flex;
+    flex-wrap: nowrap;
+  }
+
+  .category-filter {
+    flex-shrink: 0;
+  }
+}
+
+/* Large screen enhancements */
+@media (min-width: 1280px) {
+  .search-container {
+    max-width: 600px;
+  }
+
+  .search-input {
+    padding: 1rem 1rem 1rem 3rem;
+    font-size: 1.125rem;
+  }
+
+  .search-icon {
+    left: 1rem;
+    width: 1.25rem;
+    height: 1.25rem;
+  }
+
+  .category-filter {
+    padding: 0.625rem 1.25rem;
+    font-size: 1rem;
+  }
+}
